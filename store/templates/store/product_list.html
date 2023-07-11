@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  {% for product in products %}
+    <div class="p-4">
+        <div class="max-w-xs rounded overflow-hidden shadow-lg">
+            <h2>{{ product.name }}</h2>
+            <h2>{{ product.description }}</h2>
+            <h2>{{ product.price }}</h2>
+            <h2>{{ product.category }}</h2>
+        
+        </div>
+    </div>
+{% empty %}
+<p>Нет доступных продуктов для отображения.</p>
+{% endfor %}
+{% endblock %}

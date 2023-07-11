@@ -1,20 +1,27 @@
-from django.shortcuts import render, HttpResponse
+from django.shortcuts import get_object_or_404, render, HttpResponse
 from django.views.generic import ListView, DetailView
 from .models import Category, Product
-
+from django.http import JsonResponse
 
 def home(request):
-    # Получаем все товары из базы данных
-    products = Product.objects.all()
+    categories = Category.objects.all()
 
-    return render(request, 'base.html', {'products': products})
+    context = {
+        'categories': categories,
+    }
 
-class CategoryListView(ListView):
-    model = Category
-    template_name = 'category_list.html'
-    context_object_name = 'categories'
+    return render(request, 'base.html', {'context': context})
+
+class ProductListView(ListView):
+    model = Product
+    template_name = 'product_list.html'
+
+    def get_queryset(self):
+        category_id = self.kwargs['category_id']
+        category = get_object_or_404(Category, id=category_id)
+        queryset = category.products.all()
+        return queryset
 
 class ProductDetailView(DetailView):
     model = Product
     template_name = 'product_detail.html'
-    context_object_name = 'product'

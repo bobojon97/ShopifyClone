@@ -8,9 +8,198 @@
     <link rel="stylesheet" href="{% static 'css/tailwind.css' %}">
 </head>
 <body>
-    
-  <h2 class="bg-green-600 text-green-600">Hello</h2>
-      
-   
+  
+  <nav class="flex items-center justify-center bg-teal-500 p-6">
+    <div class="flex items-center flex-shrink-0 text-white mr-6">
+      <svg class="h-8 w-8 fill-current text-yellow-500 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+        <path d="M10 18a8 8 0 100-16 8 8 0 000 16zm1-12h2a1 1 0 010 2h-2v2a1 1 0 11-2 0V8H7a1 1 0 110-2h2V4a1 1 0 112 0v2z"/>
+      </svg>
+      <span class="font-semibold text-xl">ShopifyClone</span>
+    </div>
+    <div class="flex items-center">
+      <ul class="flex space-x-4">
+        <button class="inline-flex items-center justify-center rounded outline-none focus:outline-none bg-yellow-200 hover:bg-yellow-100 active:bg-yellow-300 py-2 px-3 text-sm min-w-max pr-3.5 transition-all" aria-label="Catalog">
+          <svg class="md:mr-1" height="20" width="20" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+          <span class="hidden md:inline">Каталог товаров</span>
+          
+        </button>
+      </ul>
+      <form class="ml-4 flex">
+        <input type="text" class="rounded-l-lg py-2 px-4 border-t border-b border-l text-gray-800 border-gray-200 bg-white-200" placeholder="Поиск">
+        <button type="submit" class="px-4 py-2 rounded-r-lg bg-yellow-200 text-gray-800 font-semibold border-t border-b border-r border-yellow-300">
+          Найти
+        </button>
+      </form>
+      <a href="#" class="ml-4">
+        <svg height="24" width="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.811 20.8648C11.8057 21.3512 11.6021 21.816 11.2444 22.1579C10.8867 22.4998 10.404 22.6912 9.90115 22.6903C8.8504 22.6842 7.96975 21.8196 8.0008 20.8286C8.0323 19.8042 8.88279 18.9926 9.91644 19.0001C10.4231 19.0049 10.907 19.2039 11.2622 19.5535C11.6173 19.903 11.8147 20.3746 11.811 20.8648Z" fill="#222222"></path><path d="M19.5469 20.8373C19.5577 21.8413 18.7095 22.6755 17.6641 22.6903C16.6187 22.7051 15.7498 21.8783 15.7377 20.8556C15.726 19.8503 16.6017 18.9978 17.6448 19C18.1475 19.0036 18.6287 19.1983 18.9845 19.542C19.3403 19.8857 19.5423 20.3509 19.5469 20.8373Z" fill="#222222"></path><path d="M22.9995 6.70249L22.9622 6.64567C22.96 6.6421 22.958 6.63844 22.9562 6.63468C22.774 5.97517 22.4728 5.46704 22.0103 5.12606C21.5478 4.78509 20.9504 4.6318 20.2301 4.6318H5.63749C5.61658 4.53342 5.59599 4.43551 5.57575 4.33809C5.47867 3.87676 5.38409 3.425 5.28701 2.97466C5.06797 1.94838 4.28089 1.17186 3.16822 1.0477C2.66043 0.990869 2.1372 0.997558 1.63339 1.00377C1.44372 1.00615 1.25654 1.00853 1.07483 1.00758C0.471956 1.00376 0.00149703 1.39631 3.52387e-06 1.9627C-0.00148998 2.52909 0.471939 2.92499 1.07034 2.92499C1.26217 2.92499 1.45319 2.92499 1.64336 2.92499C2.02321 2.92499 2.40106 2.92499 2.7814 2.92499C2.91319 2.91984 3.04272 2.95885 3.1478 3.03531C3.2466 3.1194 3.31218 3.23358 3.3335 3.35862C3.37979 3.56636 3.42262 3.77457 3.46593 3.9847C3.48485 4.07734 3.5041 4.17047 3.52368 4.26408C4.29234 7.9639 5.06598 11.6626 5.8446 15.3602C5.982 16.0121 6.28566 16.534 6.74766 16.8917C7.20965 17.2494 7.80655 17.4256 8.49854 17.4256H19.8686C19.9566 17.4291 20.0447 17.4275 20.1325 17.4209H20.1429C20.5352 17.3731 20.8399 17.1663 20.9838 16.8C21.2516 16.1315 20.7159 15.5068 19.9881 15.5068H8.44329C8.21727 15.5068 8.08633 15.4614 8.00369 15.397C7.92105 15.3325 7.85086 15.2212 7.80755 15.0149C7.79212 14.9395 7.77619 14.8659 7.76076 14.7924C7.73387 14.6673 7.7075 14.544 7.6826 14.418C7.64527 14.2269 7.60941 14.0359 7.57207 13.8396C7.57207 13.8277 7.56759 13.8148 7.5651 13.8024H7.59298C11.5594 13.8043 15.5255 13.8043 19.4912 13.8024C20.7612 13.8024 21.7813 13.0321 22.0367 11.8587C22.1477 11.3525 22.2533 10.8429 22.3583 10.3343C22.428 10.0001 22.4977 9.66147 22.5684 9.32765L23.0025 7.33813L22.9995 6.70249ZM20.9429 7.28321C20.6569 8.66623 20.3676 10.0486 20.0752 11.4303C20.0394 11.5975 19.9707 11.7059 19.888 11.7728C19.7834 11.8511 19.6526 11.8903 19.5201 11.8831H7.16036L6.04123 6.55254H20.3007C20.6174 6.55254 20.7866 6.63229 20.8703 6.7278C20.9539 6.82332 21.0042 6.99095 20.9429 7.28321Z" fill="#222222"></path></svg>
+      </a>
+    </div>
+  </nav>
+
+  <div
+  id="carouselExampleCaptions"
+  class="relative w-[55%] mx-auto"
+  data-te-carousel-init
+  data-te-carousel-slide>
+  <!--Carousel indicators-->
+  <div
+    class="absolute bottom-0 left-0 right-0 z-[2] mx-[15%] mb-4 flex list-none justify-center p-0"
+    data-te-carousel-indicators>
+    <button
+      type="button"
+      data-te-target="#carouselExampleCaptions"
+      data-te-slide-to="0"
+      data-te-carousel-active
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-current="true"
+      aria-label="Slide 1"></button>
+    <button
+      type="button"
+      data-te-target="#carouselExampleCaptions"
+      data-te-slide-to="1"
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-label="Slide 2"></button>
+    <button
+      type="button"
+      data-te-target="#carouselExampleCaptions"
+      data-te-slide-to="2"
+      class="mx-[3px] box-content h-[3px] w-[30px] flex-initial cursor-pointer border-0 border-y-[10px] border-solid border-transparent bg-white bg-clip-padding p-0 -indent-[999px] opacity-50 transition-opacity duration-[600ms] ease-[cubic-bezier(0.25,0.1,0.25,1.0)] motion-reduce:transition-none"
+      aria-label="Slide 3"></button>
+  </div>
+
+  <!--Carousel items-->
+  <div
+    class="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
+    <!--First item-->
+    <div
+      class="relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-te-carousel-active
+      data-te-carousel-item
+      style="backface-visibility: hidden">
+      <img
+        src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg"
+        class="block w-full"
+        alt="..." />
+      <div
+        class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+        <h5 class="text-xl">First slide label</h5>
+        <p>
+          Some representative placeholder content for the first slide.
+        </p>
+      </div>
+    </div>
+    <!--Second item-->
+    <div
+      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-te-carousel-item
+      style="backface-visibility: hidden">
+      <img
+        src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(22).jpg"
+        class="block w-full"
+        alt="..." />
+      <div
+        class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+        <h5 class="text-xl">Second slide label</h5>
+        <p>
+          Some representative placeholder content for the second slide.
+        </p>
+      </div>
+    </div>
+    <!--Third item-->
+    <div
+      class="relative float-left -mr-[100%] hidden w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
+      data-te-carousel-item
+      style="backface-visibility: hidden">
+      <img
+        src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(23).jpg"
+        class="block w-full"
+        alt="..." />
+      <div
+        class="absolute inset-x-[15%] bottom-5 hidden py-5 text-center text-white md:block">
+        <h5 class="text-xl">Third slide label</h5>
+        <p>
+          Some representative placeholder content for the third slide.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!--Carousel controls - prev item-->
+  <button
+    class="absolute bottom-0 left-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    type="button"
+    data-te-target="#carouselExampleCaptions"
+    data-te-slide="prev">
+    <span class="inline-block h-8 w-8">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M15.75 19.5L8.25 12l7.5-7.5" />
+      </svg>
+    </span>
+    <span
+      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+      >Previous</span
+    >
+  </button>
+  <!--Carousel controls - next item-->
+  <button
+    class="absolute bottom-0 right-0 top-0 z-[1] flex w-[15%] items-center justify-center border-0 bg-none p-0 text-center text-white opacity-50 transition-opacity duration-150 ease-[cubic-bezier(0.25,0.1,0.25,1.0)] hover:text-white hover:no-underline hover:opacity-90 hover:outline-none focus:text-white focus:no-underline focus:opacity-90 focus:outline-none motion-reduce:transition-none"
+    type="button"
+    data-te-target="#carouselExampleCaptions"
+    data-te-slide="next">
+    <span class="inline-block h-8 w-8">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke-width="1.5"
+        stroke="currentColor"
+        class="h-6 w-6">
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+      </svg>
+    </span>
+    <span
+      class="!absolute !-m-px !h-px !w-px !overflow-hidden !whitespace-nowrap !border-0 !p-0 ![clip:rect(0,0,0,0)]"
+      >Next</span
+    >
+  </button><br>
+  
+</div>
+<div class="font-bold text-xl mb-2 relative w-[55%] mx-auto">Популярные категории</div>
+
+<div class="grid grid-cols-3 gap-4 relative w-[55%] mx-auto">
+  {% for category in context.categories %}
+    <div class="p-4">
+      <div class="max-w-xs rounded overflow-hidden shadow-lg">
+        {% if category.image %}
+          <img class="w-full" src="{% static 'img/categories/default_image.jpg' %}" alt="">
+        {% else %}
+          <img class="w-full" src="{{ category.image.url }}" alt="Default Image">
+        {% endif %}
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2"><a href="{% url 'store:product_list' category.id %}">{{ category.name }}</a></div>
+        </div>
+      </div>
+    </div>
+  {% endfor %}
+  
+  {% block content %}
+  
+  {% endblock %}
+</div>
+
 </body>
 </html>
